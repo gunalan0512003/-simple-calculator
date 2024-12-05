@@ -1,0 +1,212 @@
+/* Importing Google Font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* Resetting default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background-image: url('https://c1.wallpaperflare.com/preview/751/382/442/brick-wall-old-dark.jpg'); /* Insert your image URL here */
+  background-size: cover; /* Make the image cover the entire background */
+  background-position: center;
+  background-attachment: fixed; /* Makes the background image fixed while scrolling */
+  animation: fadeInBody 2s ease-out; /* Fade in effect */
+  padding-bottom: 50px; /* Adds space at the bottom of the page */
+}
+
+/* Animation for body */
+@keyframes fadeInBody {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Header Section */
+header {
+  color: rgb(250, 239, 89);
+  text-align: center;
+  padding: 20px;
+  font-size: 24px;
+  width: 100%;
+  animation: slideDown 1s ease-out; /* Header Slide down animation */
+}
+
+/* Header Slide Down Animation */
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Header Title */
+header h1 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+/* Container Styling for Age Calculator */
+.container {
+  width: 500px;
+  background-color: rgba(255, 255, 255, 0.9); /* Light background with opacity */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  padding: 30px;
+  border-radius: 10px;
+  animation: popUp 0.5s ease-out; /* Pop-up animation */
+}
+
+/* Pop-up animation for container */
+@keyframes popUp {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Footer Section */
+footer {
+   /* Dark footer with transparency */
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+  animation: fadeInFooter 1s ease-in-out; /* Fade-in footer animation */
+ /* Border at the top with accent color */
+}
+
+/* Footer Text Styling */
+footer p {
+  margin: 5px 0;
+}
+
+/* Footer Animation */
+@keyframes fadeInFooter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Make all hyperlinks in the footer white */
+footer a {
+  color: white; /* Set hyperlink color to white */
+  text-decoration: none; /* Optional: Removes underline */
+  transition: color 0.3s ease; /* Optional: smooth transition on hover */
+}
+
+/* Change color of hyperlinks when hovered */
+footer a:hover {
+  color: #e9df57; /* You can customize the hover color */
+  text-decoration: underline; /* Optional: underline on hover */
+}
+
+/* Age Calculation Container */
+.upper-part {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.upper-part div {
+  height: 120px;
+  width: 120px;
+  color: white;
+  background-color: #333; /* Dark background for circles */
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+
+.upper-part div:hover {
+  transform: scale(1.1);
+}
+
+span {
+  font-size: 30px;
+  font-weight: 500;
+  color: #ff6f61; /* Accent color for numbers */
+}
+
+p {
+  font-size: 15px;
+  color: rgb(236, 236, 236);
+  font-weight: 400;
+}
+
+.lower-part {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  margin-top: 40px;
+  background-color: #333;
+}
+
+input {
+  width: 60%;
+  height: 50px;
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: white;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+input:focus {
+  background-color: #ff6f61;
+  color: white;
+}
+
+button {
+  width: 35%;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 5px;
+  background-color: #ff6f61;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff3b2f;
+  transform: translateY(-5px);
+}
+
+button:active {
+  transform: scale(0.98);
+}
