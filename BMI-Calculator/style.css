@@ -1,0 +1,252 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    background-color: #ADD8E6; /* Light Blue */
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLRJ37TBjjBfdGj1aeYXYXE-LpOAGWv_goug&s'); /* Insert your image URL here */
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Courier New', Courier, monospace;
+    animation: fadeIn 2s ease-out; /* Body fade-in */
+}
+
+/* Header Styling */
+header {
+    background-color: #414241; /* Bootstrap Success Green */
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 28px;
+    color: white;
+    animation: slideIn 1s ease-out; /* Slide-in animation for header */
+}
+
+header h1 {
+    margin: 0;
+    animation: bounceIn 1s ease-out; /* Bounce-in animation for header title */
+}
+
+header p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+/* Main content Styling */
+.container {
+    max-width: 960px;
+    margin: 50px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: scaleUp 1s ease-out; /* Scale-up animation for container */
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards; /* Fade-in effect for container */
+}
+
+/* Card Style */
+.card {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    animation: fadeInUp 1.5s ease-out; /* Card fade-in animation */
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out; /* Form group fade-in-up animation */
+}
+
+/* Input Fields Styling */
+.form-control {
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease; /* Transition effect for inputs */
+    animation: inputFocus 0.5s ease-out; /* Input fields focus animation */
+}
+
+.form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.3);
+}
+
+/* Button Styling */
+.btn {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    animation: pulse 1.5s infinite; /* Button pulse animation */
+}
+
+.btn:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+    transition: transform 0.2s ease-out; /* Button hover effect */
+}
+
+/* Result Text Styling */
+#bmi-result {
+    font-size: 18px;
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 20px;
+    color: #28a745;
+    opacity: 0;
+    animation: fadeInResult 1s 1s forwards; /* Fade-in result text */
+}
+
+/* Weight Condition Text */
+h4 {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 10px;
+    animation: fadeInUp 1.5s ease-out; /* Weight condition text fade-in */
+}
+
+/* Footer Styling */
+footer {
+    background-color: #353635;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    color: white;
+    animation: slideIn 1s ease-out; /* Footer slide-in animation */
+}
+/* Footer Social Links Styling */
+.social-links a {
+    color: white; /* White color for the links */
+    text-decoration: none; /* Remove underline from the links */
+    margin: 0 10px; /* Space between the links */
+    font-size: 16px; /* Set font size */
+}
+
+.social-links a:hover {
+    color: #28a745; /* Change color on hover to green */
+    text-decoration: underline; /* Underline the link on hover */
+}
+
+/* Animation Definitions */
+
+/* General Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Header Slide-in from top */
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Scale-up for the container */
+@keyframes scaleUp {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Card Fade-in with upward motion */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Bounce-in effect for the header */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Input field focus animation */
+@keyframes inputFocus {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Button pulse animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Fade-in animation for result text */
+@keyframes fadeInResult {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Fade-in animation for weight condition text */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

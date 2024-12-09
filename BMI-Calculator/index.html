@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="bg-success text-white text-center py-4">
+        <h1>BMI Calculator</h1>
+        <p>Your health companion to monitor Body Mass Index</p>
+    </header>
+
+    <!-- Main content Section -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card p-4 shadow">
+                    <h3 class="card-title text-center mb-4">Body Mass Index (BMI) Calculator</h3>
+                    <form id="bmi-form">
+                        <div class="form-group">
+                            <label for="height">Your Height (cm):</label>
+                            <input type="number" class="form-control" id="height" value="180" placeholder="Enter your height in cm" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="weight">Your Weight (kg):</label>
+                            <input type="number" class="form-control" id="weight" value="80" placeholder="Enter your weight in kg" required>
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="button" class="btn btn-success" id="btn">Compute BMI</button>
+                        </div>
+                    </form>
+
+                    <!-- Result Section -->
+                    <div class="form-group">
+                        <input disabled type="text" class="form-control" id="bmi-result" placeholder="Your BMI result will appear here">
+                    </div>
+                    <h4 class="text-center">Weight Condition: <span id="weight-condition"></span></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-success text-white text-center py-3">
+        <p>&copy; 2024 BMI Calculator. All rights reserved. | Created by Gunalan S |</p>
+
+
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/gunalan5123/" target="_blank" title="LinkedIn">LinkedIn</a> |
+      <a href="mailto:iniyavangunalan.com" title="Contact">Contact</a> |
+      <a href="https://github.com/gunalan0512003" target="_blank" title="GitHub">GitHub</a>
+    </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies (Optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="index.js"></script>
+</body>
+</html>
